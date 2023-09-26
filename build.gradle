@@ -1,0 +1,57 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // Appium for mobile testing
+    implementation group: 'io.appium', name: 'java-client', version: '8.5.1'
+    implementation 'org.projectlombok:lombok:1.18.22'
+
+    // Selenium for web testing
+    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
+
+    // RestAssured for API testing
+    testImplementation 'io.rest-assured:rest-assured:5.0.1'
+
+    // JUnit5 for JUnit 5 support
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // Allure for reporting
+    testImplementation 'io.qameta.allure:allure-testng:2.20.1'
+
+    // AssertJ for fluent assertions
+    testImplementation 'org.assertj:assertj-core:3.22.0'
+
+    implementation group: 'org.skyscreamer', name: 'jsonassert', version: '1.5.0'
+
+    implementation group: 'org.assertj', name: 'assertj-core', version: '3.22.0'
+
+    // Lombok for simplified Java code
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    implementation group: 'io.rest-assured', name: 'rest-assured', version: '5.0.1'
+
+
+    implementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.9.2'
+    implementation group: 'org.junit.platform', name: 'junit-platform-launcher', version: '1.8.1'
+
+    implementation group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.20.1'
+    testImplementation group: 'io.qameta.allure', name: 'allure-junit5', version: '2.20.1'
+
+
+
+}
+
+test {
+    useJUnitPlatform()
+}

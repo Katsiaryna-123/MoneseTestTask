@@ -48,8 +48,7 @@ dependencies {
     implementation group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.20.1'
     testImplementation group: 'io.qameta.allure', name: 'allure-junit5', version: '2.20.1'
 
-
-
+    implementation group: 'org.awaitility', name: 'awaitility', version: '4.1.0'
 }
 
 test {

@@ -1,4 +1,4 @@
-package ui;
+package android.elements;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;

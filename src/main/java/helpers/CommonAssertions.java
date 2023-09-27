@@ -1,11 +1,9 @@
-package requests;
+package helpers;
 
+import helpers.ConnectorResponse;
 import lombok.Data;
 import lombok.experimental.Accessors;
-import org.assertj.core.api.AbstractAssert;
-import responses.ErrorMessagesCus;
-
-import java.util.function.BiFunction;
+import helpers.ErrorMessage;
 
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -20,6 +18,6 @@ public class CommonAssertions<R, T> {
     @Data
     @Accessors(fluent = true)
     public static class Params {
-        private ErrorMessagesCus errorText;
+        private ErrorMessage errorText;
     }
 }

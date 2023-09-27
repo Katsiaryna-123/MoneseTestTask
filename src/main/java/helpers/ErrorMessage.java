@@ -1,4 +1,4 @@
-package responses;
+package helpers;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,7 +7,7 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @Accessors(fluent = true)
 
-public enum ErrorMessagesCus {
+public enum ErrorMessage {
 
     TASK_NOT_FOUND("Task not found");
 

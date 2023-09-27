@@ -6,14 +6,14 @@ import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import requests.CommonAssertions;
-import requests.Connector;
-import requests.ConnectorParameterResolver;
+import helpers.CommonAssertions;
+import helpers.Connector;
+import parameterresolvers.ConnectorParameterResolver;
 import requests.TodoistRequests;
-import requests.pojo.CreateTask;
+import pojo.CreateTaskRequest;
 import responses.CreateTaskResponse;
 
-import static responses.ErrorMessagesCus.TASK_NOT_FOUND;
+import static helpers.ErrorMessage.TASK_NOT_FOUND;
 
 public class GetTaskTests {
 
@@ -23,7 +23,7 @@ public class GetTaskTests {
     @ExtendWith(ConnectorParameterResolver.class)
     void getTask(Connector connector) {
         TasksActions tasksActions = new TasksActions(connector);
-        CreateTask taskData = CreateTask.builder().build();
+        CreateTaskRequest taskData = CreateTaskRequest.builder().build();
 
         String taskId = tasksActions.createTask(taskData).getId();
 

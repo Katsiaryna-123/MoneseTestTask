@@ -1,4 +1,4 @@
-package requests;
+package helpers;
 
 import lombok.Getter;
 import lombok.ToString;
@@ -63,7 +63,7 @@ public class Request implements ConnectorRequest {
     public static RequestBuilder baseServiceBuilder() {
         return Request
                 .builder()
-                .baseUri("https://api.todoist.com/rest/v2/");
+                .baseUri("https://api.todoist.com/rest/");
     }
 
     @ToString
@@ -83,9 +83,9 @@ public class Request implements ConnectorRequest {
         RequestBuilder() {
         }
 
-        public RequestBuilder(Map<String, String> headers) {
-            this.headers = headers;
-        }
+//        public RequestBuilder(Map<String, String> headers) {
+//            this.headers = headers;
+//        }
 
         public RequestBuilder baseUri(String baseUri) {
             this.baseUri = baseUri;
@@ -121,6 +121,7 @@ public class Request implements ConnectorRequest {
             this.headers.putAll(headers);
             return this;
         }
+        //TODO: что-то надо сделать с этим да и вообще разобраться что это за класс и как его сократить
 
         public RequestBuilder authorized() {
             this.headers.put("Bearer Token", "7a223d0685fe8c6e10eb51e2f0889d8ab084c744");

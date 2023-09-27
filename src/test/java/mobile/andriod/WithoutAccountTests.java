@@ -4,8 +4,8 @@ import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import ui.TodoistApplication;
-import ui.TodoistApplicationParameterResolver;
+import android.applications.TodoistApplication;
+import parameterresolvers.TodoistApplicationParameterResolver;
 
 
 public class WithoutAccountTests {

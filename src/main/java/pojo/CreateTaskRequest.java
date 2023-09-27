@@ -1,11 +1,11 @@
-package requests.pojo;
+package pojo;
 
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-public class CreateTask {
+public class CreateTaskRequest {
     @Builder.Default
     public String content = "Buy Milk";
     @Builder.Default

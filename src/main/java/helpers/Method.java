@@ -1,4 +1,4 @@
-package requests;
+package helpers;
 
 
 import lombok.AllArgsConstructor;

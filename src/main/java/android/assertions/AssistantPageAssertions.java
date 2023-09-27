@@ -1,8 +1,10 @@
-package ui;
+package android.assertions;
 
+import helpers.Waiter;
 import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Step;
 import org.assertj.core.api.SoftAssertions;
+import android.elements.AssistantPageElements;
 
 public class AssistantPageAssertions {
 

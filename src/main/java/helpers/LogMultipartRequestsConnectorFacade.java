@@ -1,4 +1,4 @@
-package requests;
+package helpers;
 
 
 public class LogMultipartRequestsConnectorFacade implements Connector {

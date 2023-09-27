@@ -1,9 +1,12 @@
-package ui;
+package android.pages;
 
+import helpers.Waiter;
 import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Step;
 import lombok.Getter;
 import lombok.experimental.Accessors;
+import android.assertions.AssistantPageAssertions;
+import android.elements.AssistantPageElements;
 
 public class AssistantPage {
 
@@ -24,8 +27,7 @@ public class AssistantPage {
     public AssistantPage clickContinueBtn() {
         new Waiter(Waiter.Preset.WAIT_FOR_ELEMENT).alias("Waiting packages to be visible").until(() -> elements.continueWithoutAccountBtn().isDisplayed());
 
-        elements.continueWithoutAccountBtn()
-                .click();
+        elements.continueWithoutAccountBtn().click();
         return this;
     }
 }

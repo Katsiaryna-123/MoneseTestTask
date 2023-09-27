@@ -2,9 +2,9 @@ package actions;
 
 import io.qameta.allure.Step;
 import io.restassured.common.mapper.TypeRef;
-import requests.Connector;
+import helpers.Connector;
 import requests.TodoistRequests;
-import requests.pojo.CreateTask;
+import pojo.CreateTaskRequest;
 import responses.CreateTaskResponse;
 
 public class TasksActions {
@@ -19,7 +19,7 @@ public class TasksActions {
     }
 
     @Step("Create task")
-    public CreateTaskResponse createTask(CreateTask createTask) {
+    public CreateTaskResponse createTask(CreateTaskRequest createTask) {
         return connector.send(TodoistRequests.createTask(createTask)
                         .build())
                 .ifOk()

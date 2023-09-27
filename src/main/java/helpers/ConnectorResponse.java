@@ -1,4 +1,4 @@
-package requests;
+package helpers;
 
 
 import io.restassured.common.mapper.TypeRef;

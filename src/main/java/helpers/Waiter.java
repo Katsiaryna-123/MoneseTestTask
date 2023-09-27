@@ -1,5 +1,6 @@
-package ui;
+package helpers;
 
+import exceptions.AliasForWaiterIsNotSetException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.SneakyThrows;
@@ -56,7 +57,7 @@ public class Waiter {
     @Getter
     public enum Preset {
 
-        WAIT_FOR_ELEMENT(await().pollInterval(Duration.ofSeconds(1)).atMost(Duration.ofSeconds(10)),
+        WAIT_FOR_ELEMENT(await().pollInterval(Duration.ofSeconds(1)).atMost(Duration.ofSeconds(15)),
                 "Waiting for element to be displayed");
         private final ConditionFactory value;
         private final String alias;

@@ -1,4 +1,4 @@
-package ui;
+package parameterresolvers;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
@@ -9,6 +9,7 @@ import org.junit.jupiter.api.extension.ParameterResolutionException;
 import org.junit.jupiter.api.extension.ParameterResolver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.SessionId;
+import android.applications.TodoistApplication;
 
 import java.net.MalformedURLException;
 import java.net.URL;

@@ -4,7 +4,7 @@ package assertions;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.assertj.core.api.SoftAssertions;
-import requests.pojo.CreateTask;
+import pojo.CreateTaskRequest;
 import responses.CreateTaskResponse;
 
 import java.util.function.BiConsumer;
@@ -29,6 +29,6 @@ public class TasksAssertions {
     @Accessors(fluent = true)
     public static class AssertionParams {
 //        private String url;
-        private CreateTask taskData;
+        private CreateTaskRequest taskData;
     }
 }

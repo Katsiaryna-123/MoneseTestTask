@@ -1,5 +1,8 @@
-package requests;
+package parameterresolvers;
 
+import helpers.Connector;
+import helpers.LogMultipartRequestsConnectorFacade;
+import helpers.RestAssuredConnector;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.api.extension.ParameterResolutionException;

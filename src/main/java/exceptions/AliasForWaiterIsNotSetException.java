@@ -1,4 +1,4 @@
-package ui;
+package exceptions;
 
 public class AliasForWaiterIsNotSetException extends Exception {
     public AliasForWaiterIsNotSetException() {

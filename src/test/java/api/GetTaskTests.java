@@ -1,20 +1,20 @@
 package api;
 
-import actions.TasksActions;
-import assertions.TasksAssertions;
-import helpers.CommonAssertions;
-import helpers.Connector;
-import helpers.owners.OwnerKatsia;
+import apicore.actions.TasksActions;
+import apicore.assertions.TasksAssertions;
+import apicore.assertions.CommonAssertions;
+import apicore.connectors.Connector;
+import tags.owners.OwnerKatsia;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import parameterresolvers.ConnectorParameterResolver;
-import pojo.CreateTaskRequest;
-import requests.TodoistRequests;
-import responses.CreateTaskResponse;
+import apicore.ConnectorParameterResolver;
+import apicore.pojo.CreateTaskRequest;
+import apicore.requests.TodoistRequests;
+import apicore.responses.CreateTaskResponse;
 
-import static helpers.ErrorMessage.TASK_NOT_FOUND;
+import static apicore.ErrorMessage.TASK_NOT_FOUND;
 
 @Feature("Get active task")
 @Links({@Link(name = "Documentation", url = "https://developer.todoist.com/rest/v2/#get-an-active-task")})
@@ -34,7 +34,7 @@ public class GetTaskTests {
 
         CreateTaskResponse createdTask = tasksActions.getTask(taskId);
 
-        TasksAssertions.checkCreatedTaskData.accept(createdTask, new TasksAssertions.AssertionParams()
+        TasksAssertions.checkCreatedTaskData(createdTask, new TasksAssertions.AssertionParams()
                 .taskData(taskData));
     }
 

@@ -1,0 +1,9 @@
+platform.name=Android
+device.name=Pixel 2 API 33
+platform.version=13
+udid=emulator-5554
+command.timeout=60
+auto.grant.permissions=true
+app.path=/Users/katsiarynahaspadaryk/Desktop/todoist/planner_0.3.5_Apkpure.apk
+automation.name=UiAutomator2
+appium.url=http://0.0.0.0:4723/

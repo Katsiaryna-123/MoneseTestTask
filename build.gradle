@@ -49,6 +49,9 @@ dependencies {
     testImplementation group: 'io.qameta.allure', name: 'allure-junit5', version: '2.20.1'
 
     implementation group: 'org.awaitility', name: 'awaitility', version: '4.1.0'
+//шото для алюр степов походу https://juspreetk.medium.com/how-to-add-step-descriptions-in-allure-reports-gradle-java-2581157aa738
+    implementation group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.19'
+
 }
 
 test {

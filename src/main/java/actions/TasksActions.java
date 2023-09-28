@@ -1,20 +1,18 @@
 package actions;
 
+import helpers.Connector;
 import io.qameta.allure.Step;
 import io.restassured.common.mapper.TypeRef;
-import helpers.Connector;
-import requests.TodoistRequests;
 import pojo.CreateTaskRequest;
+import requests.TodoistRequests;
 import responses.CreateTaskResponse;
 
 public class TasksActions {
 
     private final Connector connector;
-//    private final String token;
 
 
     public TasksActions(Connector connector) {
-        //  this.token = "ac";
         this.connector = connector;
     }
 

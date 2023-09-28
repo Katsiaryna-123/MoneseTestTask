@@ -28,7 +28,6 @@ public class TasksAssertions {
     @Data
     @Accessors(fluent = true)
     public static class AssertionParams {
-//        private String url;
         private CreateTaskRequest taskData;
     }
 }

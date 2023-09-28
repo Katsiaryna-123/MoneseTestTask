@@ -83,9 +83,6 @@ public class Request implements ConnectorRequest {
         RequestBuilder() {
         }
 
-//        public RequestBuilder(Map<String, String> headers) {
-//            this.headers = headers;
-//        }
 
         public RequestBuilder baseUri(String baseUri) {
             this.baseUri = baseUri;

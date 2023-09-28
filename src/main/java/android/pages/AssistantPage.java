@@ -25,9 +25,13 @@ public class AssistantPage {
 
     @Step("Click continue button")
     public AssistantPage clickContinueBtn() {
-        new Waiter(Waiter.Preset.WAIT_FOR_ELEMENT).alias("Waiting packages to be visible").until(() -> elements.continueWithoutAccountBtn().isDisplayed());
+        //TODO: strange waiter
+        new Waiter(Waiter.Preset.WAIT_FOR_ELEMENT).alias("Waiting element to be visible")
+                .until(() -> elements.continueWithoutAccountBtn()
+                        .isDisplayed());
 
-        elements.continueWithoutAccountBtn().click();
+        elements.continueWithoutAccountBtn()
+                .click();
         return this;
     }
 }

@@ -15,25 +15,14 @@ public class Waiter {
 
     private final Preset preset;
     private String alias;
-    private Object[] aliasTemplateArgs;
 
     public Waiter(Preset preset) {
         this.preset = preset;
         this.alias = preset.getAlias();
     }
 
-    public Waiter(Preset preset, String alias) {
-        this.preset = preset;
-        this.alias = alias;
-    }
-
     public Waiter alias(String alias) {
         this.alias = alias;
-        return this;
-    }
-
-    public Waiter aliasTemplateArgs(Object... aliasTemplateArgs) {
-        this.aliasTemplateArgs = aliasTemplateArgs;
         return this;
     }
 
@@ -42,11 +31,7 @@ public class Waiter {
         if (alias == null) {
             throw new AliasForWaiterIsNotSetException();
         }
-        return preset
-                .getValue()
-                .alias(aliasTemplateArgs != null && aliasTemplateArgs.length > 0
-                        ? String.format(alias, aliasTemplateArgs)
-                        : alias);
+        return preset.getValue().alias(alias);
     }
 
     public void until(Callable<Boolean> conditionEvaluator) {

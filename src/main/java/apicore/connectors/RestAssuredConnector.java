@@ -22,7 +22,7 @@ public class RestAssuredConnector implements Connector {
             RequestSpecification spec = getRequestSpecification(request);
             Response response = RestAssured.given(spec)
                     .auth()
-                    //.oauth2("you can place token here for testing purposes")
+                   // .oauth2("15c797109a58e37e107ddfe181e3720805d90179")
                     .oauth2(System.getenv("TOKEN"))
                     .request(request.getMethod().getValue(), request.getPath());
             return new RestAssuredResponse<>(response);

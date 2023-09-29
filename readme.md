@@ -22,7 +22,7 @@ Before installing Appium, ensure that you have the following prerequisites set u
 Node.js and npm (Node Package Manager) installed.
 Android Studio installed for device emulation.
 Android Home Path exported (for Android testing).
-Installation Steps
+
 Follow these steps to install Appium:
 
 Step 1: Install Node.js and npm
@@ -61,11 +61,13 @@ Step 6:
 Install Appium Inspector (to collecting attributes from page) and connect your session to it.
 1. Ensure that your Appium server is running.
 
-2. In your test script, create a new Appium session by initiating a session request (you may just run test).
+2. Ensure that emulator is running.
 
-3. Once the session is created, you will see sessionId in console.
+3. Create a new Appium session by initiating a session request (you may just run test).
 
-4. Open Appium Inspector and connect to the session using the sessionId you obtained in the previous step.
+4. Once the session is created, you will see sessionId in console.
+
+5. Open Appium Inspector and connect to the session using the sessionId you obtained in the previous step.
 
 You can now interact with the device or emulator using the Appium Inspector interface for debugging and inspection.
 

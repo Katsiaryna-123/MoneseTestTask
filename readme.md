@@ -1,5 +1,5 @@
-GENERATING TOKEN FOR API TEST
-This section provides instructions on how to start with api tests.
+# GENERATING TOKEN FOR API TEST
+### This section provides instructions on how to start with api tests.
 
 Step 1: Go to https://todoist.com/ and log in to your account.
 
@@ -7,13 +7,16 @@ Step 2: Go to Settings -> Integrations -> Developer tab.
 
 Step 3: Generate a token, copy it.
 
-Step 4: Store it in your system with name "TOKEN" so that class java/apicore/connectors/RestAssuredConnector.java will know about it.
+Step 4: Open a terminal and use the export command to set the environment variable. 
+Replace "your_token_here" with your actual token value.
 
-Now RestAssuredConnector knows your token and you can run api tests.
+export TOKEN="your_token_here"
 
-INSTALLING APPIUM
+Now RestAssuredConnector.java class knows your token, and you can run api tests.
 
-This section provides instructions on how to install Appium on your system.
+# INSTALLING APPIUM
+
+### This section provides instructions on how to install Appium on your system.
 
 Prerequisites
 
@@ -71,6 +74,6 @@ Install Appium Inspector (to collecting attributes from page) and connect your s
 
 You can now interact with the device or emulator using the Appium Inspector interface for debugging and inspection.
 
-MAKE A REPORT
+# MAKE A REPORT
 
 After test run completes write in terminal "allure serve" to generate report.

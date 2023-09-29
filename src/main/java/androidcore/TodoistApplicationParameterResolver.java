@@ -7,7 +7,6 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.extension.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.SessionId;
 
 import java.io.FileInputStream;
 import java.net.URL;

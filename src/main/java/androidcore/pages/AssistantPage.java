@@ -8,7 +8,6 @@ import lombok.experimental.Accessors;
 
 public class AssistantPage {
 
-    private final AndroidDriver driver;
     private final AssistantPageElements elements;
 
     @Getter
@@ -16,7 +15,6 @@ public class AssistantPage {
     private final AssistantPageAssertions assertions;
 
     public AssistantPage(AndroidDriver driver) {
-        this.driver = driver;
         elements = new AssistantPageElements(driver);
         assertions = new AssistantPageAssertions(elements, driver);
     }

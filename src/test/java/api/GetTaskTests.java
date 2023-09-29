@@ -1,18 +1,18 @@
 package api;
 
+import apicore.ConnectorParameterResolver;
 import apicore.actions.TasksActions;
-import apicore.assertions.TasksAssertions;
 import apicore.assertions.CommonAssertions;
+import apicore.assertions.TasksAssertions;
 import apicore.connectors.Connector;
-import tags.owners.OwnerKatsia;
+import apicore.pojo.CreateTaskRequest;
+import apicore.requests.TodoistRequests;
+import apicore.responses.CreateTaskResponse;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import apicore.ConnectorParameterResolver;
-import apicore.pojo.CreateTaskRequest;
-import apicore.requests.TodoistRequests;
-import apicore.responses.CreateTaskResponse;
+import tags.owners.OwnerKatsia;
 
 import static apicore.ErrorMessage.TASK_NOT_FOUND;
 

@@ -36,16 +36,12 @@ public class TodoistApplicationParameterResolver implements ParameterResolver, A
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, properties.getProperty("command.timeout"));
         capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, Boolean.parseBoolean(properties.getProperty("auto.grant.permissions")));
 
-     //   capabilities.setCapability(MobileCapabilityType.APP, properties.getProperty(apkFilePath));
+        //   capabilities.setCapability(MobileCapabilityType.APP, properties.getProperty(apkFilePath));
         capabilities.setCapability(MobileCapabilityType.APP, "/Users/katsiarynahaspadaryk/Desktop/todoist/planner_0.3.5_Apkpure.apk");
 
         capabilities.setCapability("automationName", properties.getProperty("automation.name"));
 
         AndroidDriver driver = new AndroidDriver(new URL(properties.getProperty("appium.url")), capabilities);
-        SessionId sessionId = driver.getSessionId();
-        String sessionID = sessionId.toString();
-
-        System.out.println("Session ID: " + sessionID);
 
         app = new TodoistApplication(driver);
     }

@@ -18,5 +18,4 @@ public interface ConnectorRequest {
     String getContentType();
 
     String getBasePath();
-
 }

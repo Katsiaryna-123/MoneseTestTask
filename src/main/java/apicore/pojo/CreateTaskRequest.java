@@ -3,8 +3,8 @@ package apicore.pojo;
 import lombok.Builder;
 import lombok.Data;
 
-@Data
 @Builder
+@Data
 public class CreateTaskRequest {
     @Builder.Default
     public String content = "Buy Milk";

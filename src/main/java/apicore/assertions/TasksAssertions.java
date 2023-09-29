@@ -1,11 +1,11 @@
 package apicore.assertions;
 
 
+import apicore.pojo.CreateTaskRequest;
+import apicore.responses.CreateTaskResponse;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.assertj.core.api.SoftAssertions;
-import apicore.pojo.CreateTaskRequest;
-import apicore.responses.CreateTaskResponse;
 
 import static io.qameta.allure.Allure.step;
 

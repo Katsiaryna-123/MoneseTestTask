@@ -9,18 +9,14 @@ import static apicore.Waiter.Preset.WAIT_FOR_ELEMENT;
 
 public class StartPage {
 
-    private final AndroidDriver driver;
     private final StartPageElements elements;
 
     public StartPage(AndroidDriver driver) {
-        this.driver = driver;
         elements = new StartPageElements(driver);
     }
 
     @Step("Click continue button")
     public StartPage clickContinueBtn() {
-
-        //TODO: strange waiter
         new Waiter(WAIT_FOR_ELEMENT)
                 .until(() -> elements
                         .continueWithoutAccountBtn()

@@ -18,14 +18,12 @@ public class RestAssuredConnector implements Connector {
     @Override
     public <T> ConnectorResponse<T> send(ConnectorRequest request) {
 
-        //TODO: api key remove
         return step(String.format("Send %s Request to %s", request.getMethod(), request.getPath()), () -> {
             RequestSpecification spec = getRequestSpecification(request);
             Response response = RestAssured.given(spec)
                     .auth()
-                    .oauth2("15c797109a58e37e107ddfe181e3720805d90179")
-                    //TODO: должно быть так но для тестового... хз
-                    //.oauth2(System.getenv("TOKEN"))
+                    //.oauth2("you can place token here for testing purposes")
+                    .oauth2(System.getenv("TOKEN"))
                     .request(request.getMethod().getValue(), request.getPath());
             return new RestAssuredResponse<>(response);
         });

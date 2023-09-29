@@ -9,10 +9,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum Method {
     GET("GET"),
-    POST("POST"),
-    PUT("PUT"),
-    DELETE("DELETE"),
-    PATCH("PATCH");
+    POST("POST");
 
-    String value;
+    final String value;
 }

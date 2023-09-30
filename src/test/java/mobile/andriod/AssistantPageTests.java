@@ -1,14 +1,14 @@
 package mobile.andriod;
 
+import androidcore.TodoistApplicationParameterResolver;
 import androidcore.applications.TodoistApplication;
-import tags.owners.OwnerKatsia;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import androidcore.TodoistApplicationParameterResolver;
 import tags.AndroidTag;
+import tags.owners.OwnerKatsia;
 
 @Feature("Assistant page")
 @AndroidTag

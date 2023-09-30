@@ -9,7 +9,6 @@ import java.util.Map;
 @Data
 @Builder
 public class Request implements ConnectorRequest {
-
     private final String baseUri;
     private final String path;
     private final Method method;

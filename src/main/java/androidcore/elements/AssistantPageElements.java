@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 public class AssistantPageElements {
     protected AndroidDriver androidDriver;
 
-
     public AssistantPageElements(AndroidDriver androidDriver) {
         this.androidDriver = androidDriver;
     }
@@ -23,6 +22,7 @@ public class AssistantPageElements {
     public WebElement maxImage() {
         return androidDriver.findElement(AppiumBy.accessibilityId("Max"));
     }
+
     public WebElement noAssistantImage() {
         return androidDriver.findElement(AppiumBy.accessibilityId("No assistant"));
     }

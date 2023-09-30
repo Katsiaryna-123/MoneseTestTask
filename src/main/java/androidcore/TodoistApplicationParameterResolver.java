@@ -2,16 +2,17 @@ package androidcore;
 
 import androidcore.applications.TodoistApplication;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.extension.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.FileInputStream;
 import java.net.URL;
-import java.util.Objects;
 import java.util.Properties;
+
+import static io.appium.java_client.remote.AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS;
+import static io.appium.java_client.remote.MobileCapabilityType.*;
+import static org.openqa.selenium.remote.CapabilityType.PLATFORM_NAME;
 
 public class TodoistApplicationParameterResolver implements ParameterResolver, AfterTestExecutionCallback {
 
@@ -24,21 +25,16 @@ public class TodoistApplicationParameterResolver implements ParameterResolver, A
         properties.load(config);
         config.close();
 
-        String apkFilePath = Objects.requireNonNull(getClass().getClassLoader().getResource("planner_0.3.5_Apkpure.apk"))
-                .getFile();
-
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, properties.getProperty("platform.name"));
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, properties.getProperty("device.name"));
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, properties.getProperty("platform.version"));
-        capabilities.setCapability(MobileCapabilityType.UDID, properties.getProperty("udid"));
-        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, properties.getProperty("command.timeout"));
-        capabilities.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, Boolean.parseBoolean(properties.getProperty("auto.grant.permissions")));
-
-        //   capabilities.setCapability(MobileCapabilityType.APP, properties.getProperty(apkFilePath));
-        capabilities.setCapability(MobileCapabilityType.APP, "/Users/katsiarynahaspadaryk/Desktop/todoist/planner_0.3.5_Apkpure.apk");
-
-        capabilities.setCapability("automationName", properties.getProperty("automation.name"));
+        capabilities.setCapability(PLATFORM_NAME, properties.getProperty("platform.name"));
+        capabilities.setCapability(DEVICE_NAME, properties.getProperty("device.name"));
+        capabilities.setCapability(PLATFORM_VERSION, properties.getProperty("platform.version"));
+        capabilities.setCapability(UDID, properties.getProperty("udid"));
+        capabilities.setCapability(NEW_COMMAND_TIMEOUT, properties.getProperty("command.timeout"));
+        capabilities.setCapability(AUTO_GRANT_PERMISSIONS, Boolean.parseBoolean(properties.getProperty("auto.grant.permissions")));
+        //change path here:
+        capabilities.setCapability(APP, "/Users/katsiarynahaspadaryk/MoneseTestTask/src/main/resources/planner_0.3.5_Apkpure.apk");
+        capabilities.setCapability(AUTOMATION_NAME, properties.getProperty("automation.name"));
 
         AndroidDriver driver = new AndroidDriver(new URL(properties.getProperty("appium.url")), capabilities);
 

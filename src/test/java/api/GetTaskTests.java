@@ -8,7 +8,10 @@ import apicore.connectors.Connector;
 import apicore.pojo.CreateTaskRequest;
 import apicore.requests.TodoistRequests;
 import apicore.responses.CreateTaskResponse;
-import io.qameta.allure.*;
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Link;
+import io.qameta.allure.Links;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,7 +22,6 @@ import static apicore.ErrorMessage.TASK_NOT_FOUND;
 @Feature("Get active task")
 @Links({@Link(name = "Documentation", url = "https://developer.todoist.com/rest/v2/#get-an-active-task")})
 @OwnerKatsia
-@Owner("Katsiaryna Haspadaryk")
 public class GetTaskTests {
 
     @Test

@@ -16,13 +16,11 @@ public class StartPage {
 
     @Step("Click continue button")
     public void clickContinueBtn() {
-
         new Waiter(WAIT_FOR_ELEMENT)
                 .tryUntil(() -> elements
                         .continueWithoutAccountBtn()
                         .isDisplayed());
 
-        elements.continueWithoutAccountBtn()
-                .click();
+        elements.continueWithoutAccountBtn().click();
     }
 }

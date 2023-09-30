@@ -1,5 +1,7 @@
 # How to start with running tests (MacOS)
+
 ## GENERATING TOKEN FOR API TEST
+
 ### This section provides instructions on how to start with api tests.
 
 Step 1: Go to https://todoist.com/ and log in to your account.
@@ -9,7 +11,9 @@ Step 2: Go to Settings -> Integrations -> Developer tab.
 Step 3: Generate a token, copy it.
 
 Step 4: Open a terminal and store token as an environment variable.
+
 #### Steps to store token using zshell:
+
 1. Open terminal, enter "echo $SHELL". You'll see :/bin/zsh for zshell or :/bin/bash for bash.
 2. Enter: "export TOKEN=placeYourTokenHere" >> ~/.zshrc
 3. Confirm by entering: cat ~/.zshrc
@@ -19,6 +23,12 @@ Step 4: Open a terminal and store token as an environment variable.
 7. Reboot your machine
 
 Now RestAssuredConnector.java class knows your token, and you can run api tests.
+
+## PASTE PATH TO APK
+
+You will find apk file here: src/main/resources.
+
+Copy absolute path of the apk and paste it as a capability "APP" in TodoistApplicationParameterResolver.java.
 
 ## INSTALLING APPIUM
 
@@ -30,7 +40,7 @@ Before installing Appium, ensure that you have the following prerequisites set u
 
 Node.js and npm (Node Package Manager) installed.
 
-Android Studio installed for device emulation.
+Android Studio installed for device emulation (device data you will find in resources/config).
 
 Android Home Path exported (for Android testing).
 
@@ -49,9 +59,10 @@ This command will download and install Appium along with its dependencies.
 
 Step 3: Install Appium Dependencies
 
-Depending on your testing needs, you may need to install additional dependencies. For Android testing, you can install UIAutomator2 Driver:
+Depending on your testing needs, you may need to install additional dependencies. For Android testing, you can install
+UIAutomator2 Driver:
 
-npm install -g appium-doctor   # (Optional) Install Appium Doctor to check for dependencies.
+npm install -g appium-doctor # (Optional) Install Appium Doctor to check for dependencies.
 
 npm install -g appium-uiautomator2-driver
 
@@ -71,6 +82,7 @@ The Appium server should now be running and ready to accept automation commands.
 
 Step 6:
 Install Appium Inspector (to collecting attributes from page) and connect your session to it.
+
 1. Ensure that your Appium server is running.
 
 2. Ensure that emulator is running.

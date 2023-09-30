@@ -1,16 +1,15 @@
 package apicore.actions;
 
 import apicore.connectors.Connector;
-import io.qameta.allure.Step;
-import io.restassured.common.mapper.TypeRef;
 import apicore.pojo.CreateTaskRequest;
 import apicore.requests.TodoistRequests;
 import apicore.responses.CreateTaskResponse;
+import io.qameta.allure.Step;
+import io.restassured.common.mapper.TypeRef;
 
 public class TasksActions {
 
     private final Connector connector;
-
 
     public TasksActions(Connector connector) {
         this.connector = connector;

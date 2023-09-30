@@ -32,8 +32,7 @@ public class TodoistApplicationParameterResolver implements ParameterResolver, A
         capabilities.setCapability(UDID, properties.getProperty("udid"));
         capabilities.setCapability(NEW_COMMAND_TIMEOUT, properties.getProperty("command.timeout"));
         capabilities.setCapability(AUTO_GRANT_PERMISSIONS, Boolean.parseBoolean(properties.getProperty("auto.grant.permissions")));
-        //change path here:
-        capabilities.setCapability(APP, "/Users/katsiarynahaspadaryk/MoneseTestTask/src/main/resources/planner_0.3.5_Apkpure.apk");
+        capabilities.setCapability(APP, properties.getProperty("app.path"));
         capabilities.setCapability(AUTOMATION_NAME, properties.getProperty("automation.name"));
 
         AndroidDriver driver = new AndroidDriver(new URL(properties.getProperty("appium.url")), capabilities);

@@ -28,7 +28,7 @@ Now RestAssuredConnector.java class knows your token, and you can run api tests.
 
 You will find apk file here: src/main/resources.
 
-Copy absolute path of the apk and paste it as a capability "APP" in TodoistApplicationParameterResolver.java.
+Copy absolute path of the apk and paste it as app.path property in config file.
 
 ## INSTALLING APPIUM
 

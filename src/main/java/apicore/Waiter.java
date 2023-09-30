@@ -34,16 +34,24 @@ public class Waiter {
         return preset.getValue().alias(alias);
     }
 
-    public void until(Callable<Boolean> conditionEvaluator) {
-        unwrapPreset().until(conditionEvaluator);
+    public void tryUntil(Callable<Boolean> conditionEvaluator) {
+        unwrapPreset().until(() -> {
+            try {
+                return conditionEvaluator.call();
+            }
+            catch (Exception e) {
+                return false;
+            }
+        });
     }
+
 
     @AllArgsConstructor
     @Getter
     public enum Preset {
 
         WAIT_FOR_ELEMENT(await()
-                .pollInterval(Duration.ofSeconds(1))
+                .pollInterval(Duration.ofSeconds(3))
                 .atMost(Duration.ofSeconds(15)),
                 "Waiting for element to be displayed");
 

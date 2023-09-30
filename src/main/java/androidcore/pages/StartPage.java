@@ -8,7 +8,6 @@ import io.qameta.allure.Step;
 import static apicore.Waiter.Preset.WAIT_FOR_ELEMENT;
 
 public class StartPage {
-
     private final StartPageElements elements;
 
     public StartPage(AndroidDriver driver) {
@@ -16,14 +15,14 @@ public class StartPage {
     }
 
     @Step("Click continue button")
-    public StartPage clickContinueBtn() {
+    public void clickContinueBtn() {
+
         new Waiter(WAIT_FOR_ELEMENT)
-                .until(() -> elements
+                .tryUntil(() -> elements
                         .continueWithoutAccountBtn()
                         .isDisplayed());
 
         elements.continueWithoutAccountBtn()
                 .click();
-        return this;
     }
 }

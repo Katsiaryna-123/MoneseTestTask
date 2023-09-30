@@ -15,9 +15,6 @@ dependencies {
     implementation group: 'io.appium', name: 'java-client', version: '8.5.1'
     implementation 'org.projectlombok:lombok:1.18.22'
 
-//    // Selenium for web testing
-//    testImplementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
-
     // RestAssured for API testing
     testImplementation 'io.rest-assured:rest-assured:5.0.1'
 
@@ -50,6 +47,9 @@ dependencies {
     implementation group: 'org.awaitility', name: 'awaitility', version: '4.1.0'
 //шото для алюр степов походу https://juspreetk.medium.com/how-to-add-step-descriptions-in-allure-reports-gradle-java-2581157aa738
     implementation group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.19'
+
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-support', version: '4.13.0'
+
 
 }
 

@@ -1,4 +1,5 @@
-# GENERATING TOKEN FOR API TEST
+# How to start with running tests (MacOS)
+## GENERATING TOKEN FOR API TEST
 ### This section provides instructions on how to start with api tests.
 
 Step 1: Go to https://todoist.com/ and log in to your account.
@@ -7,26 +8,33 @@ Step 2: Go to Settings -> Integrations -> Developer tab.
 
 Step 3: Generate a token, copy it.
 
-Step 4: Open a terminal and use the export command to set the environment variable. 
-Replace "your_token_here" with your actual token value.
-
-export TOKEN="your_token_here"
+Step 4: Open a terminal and store token as an environment variable.
+#### Steps to store token using zshell:
+1. Open terminal, enter "echo $SHELL". You'll see :/bin/zsh for zshell or :/bin/bash for bash.
+2. Enter: "export TOKEN=placeYourTokenHere" >> ~/.zshrc
+3. Confirm by entering: cat ~/.zshrc
+4. Enter source ~/.zshrc
+5. Check that token is set: env | grep "TOKEN"
+6. Enter the same command in other terminal to make sure that variable is set permanently
+7. Reboot your machine
 
 Now RestAssuredConnector.java class knows your token, and you can run api tests.
 
-# INSTALLING APPIUM
+## INSTALLING APPIUM
 
 ### This section provides instructions on how to install Appium on your system.
 
-Prerequisites
+#### Prerequisites:
 
 Before installing Appium, ensure that you have the following prerequisites set up on your system:
 
 Node.js and npm (Node Package Manager) installed.
+
 Android Studio installed for device emulation.
+
 Android Home Path exported (for Android testing).
 
-Follow these steps to install Appium:
+#### Follow these steps to install Appium:
 
 Step 1: Install Node.js and npm
 
@@ -44,6 +52,7 @@ Step 3: Install Appium Dependencies
 Depending on your testing needs, you may need to install additional dependencies. For Android testing, you can install UIAutomator2 Driver:
 
 npm install -g appium-doctor   # (Optional) Install Appium Doctor to check for dependencies.
+
 npm install -g appium-uiautomator2-driver
 
 Step 4: Verify Installation
@@ -74,6 +83,6 @@ Install Appium Inspector (to collecting attributes from page) and connect your s
 
 You can now interact with the device or emulator using the Appium Inspector interface for debugging and inspection.
 
-# MAKE A REPORT
+## MAKE A REPORT
 
 After test run completes write in terminal "allure serve" to generate report.

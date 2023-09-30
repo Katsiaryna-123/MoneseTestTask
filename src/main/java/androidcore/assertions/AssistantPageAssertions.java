@@ -20,7 +20,7 @@ public class AssistantPageAssertions {
 
     @Step("Check assistant page")
     public void checkAssistantPage() {
-        new Waiter(WAIT_FOR_ELEMENT).until(() -> elements.chooseAssistantHeader().isDisplayed());
+        new Waiter(WAIT_FOR_ELEMENT).tryUntil(() -> elements.chooseAssistantHeader().isDisplayed());
 
         SoftAssertions softly = new SoftAssertions();
 
